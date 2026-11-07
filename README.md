@@ -81,7 +81,9 @@ npm test
 npm run pack   # dist/wonlens.zip
 ```
 
-`manifest.json` 의 버전을 올리고 같은 버전의 태그(`v0.3.0` 등)를 push 하면, GitHub Actions 가 테스트 후 zip 을 붙인 Release 를 만듭니다.
+새 버전을 낼 때는 `manifest.json` 의 버전을 올리고 `npm run pack` 으로 만든 `dist/wonlens.zip` 을
+[Releases](https://github.com/namhyuniverse/wonlens/releases/new) 에 올립니다. 파일 이름은 `wonlens.zip` 그대로 둬야
+설치 링크가 최신 버전을 가리킵니다.
 
 | 경로 | 역할 |
 | --- | --- |
