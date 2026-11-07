@@ -1,0 +1,13 @@
+{
+  "name": "wonlens",
+  "version": "0.2.0",
+  "private": true,
+  "license": "MIT",
+  "description": "바이낸스 USDT 금액을 업비트 USDT/KRW 기준 원화로 덧붙여 보여 주는 크롬 확장",
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "devDependencies": {
+    "jsdom": "^25.0.1"
+  }
+}

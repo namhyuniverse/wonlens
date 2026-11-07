@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "wonlens",
+  "version": "0.2.0",
+  "description": "바이낸스 화면의 USDT 금액 옆에 업비트 USDT/KRW 시세로 환산한 원화 값을 붙입니다.",
+  "minimum_chrome_version": "116",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://api.upbit.com/*",
+    "https://api.frankfurter.dev/*"
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.binance.com/*"],
+      "js": ["src/format.js", "src/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "wonlens"
+  },
+  "commands": {
+    "toggle-krw": {
+      "suggested_key": { "default": "Alt+Shift+K" },
+      "description": "원화 표시 켜기/끄기"
+    }
+  }
+}

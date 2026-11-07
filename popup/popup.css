@@ -1,0 +1,160 @@
+body {
+  width: 260px;
+  margin: 0;
+  padding: 12px 14px;
+  font: 13px/1.4 -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', sans-serif;
+  background: #14161b;
+  color: #e6e8eb;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #262a32;
+}
+
+p {
+  margin: 0;
+}
+
+.rate {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.up {
+  color: #22c55e;
+}
+
+.down {
+  color: #ef4444;
+}
+
+.label {
+  margin: 8px 0 4px;
+  color: #8b919a;
+  font-size: 11px;
+}
+
+.label:first-child {
+  margin-top: 0;
+}
+
+.meta {
+  margin-top: 4px;
+  color: #8b919a;
+  font-size: 11px;
+}
+
+.meta.error {
+  color: #ef4444;
+}
+
+.foot {
+  margin-top: 10px;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4a505a;
+}
+
+.dot.on {
+  background: #22c55e;
+}
+
+.seg {
+  display: flex;
+  gap: 4px;
+}
+
+button {
+  flex: 1;
+  padding: 5px 0;
+  border: 1px solid #262a32;
+  border-radius: 4px;
+  background: #262a32;
+  color: #e6e8eb;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+button:hover {
+  border-color: #4a505a;
+}
+
+.seg button.active {
+  border-color: #6C8CFF;
+  color: #6C8CFF;
+}
+
+button.wide {
+  width: 100%;
+}
+
+.link {
+  margin-left: 6px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: #6C8CFF;
+  font-size: 11px;
+}
+
+.switch {
+  position: relative;
+  width: 36px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch span {
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background: #4a505a;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.switch span::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.15s;
+}
+
+.switch input:checked + span {
+  background: #6C8CFF;
+}
+
+.switch input:checked + span::before {
+  transform: translateX(16px);
+}

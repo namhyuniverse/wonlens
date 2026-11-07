@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <strong>wonlens</strong>
+      <label class="switch">
+        <input type="checkbox" id="enabled" />
+        <span></span>
+      </label>
+    </header>
+
+    <section>
+      <p class="rate"><span id="live" class="dot"></span><span id="rate">시세 불러오는 중…</span></p>
+      <p class="meta" id="rate-meta"></p>
+    </section>
+
+    <section>
+      <p class="row"><span>김프</span><strong id="premium">–</strong></p>
+      <p class="meta" id="forex-meta"></p>
+    </section>
+
+    <section>
+      <p class="label">표기</p>
+      <div class="seg" data-key="unit">
+        <button data-value="won">₩ 원</button>
+        <button data-value="man">만원</button>
+        <button data-value="auto">자동(만·억)</button>
+      </div>
+      <p class="label">보기</p>
+      <div class="seg" data-key="mode">
+        <button data-value="append">나란히</button>
+        <button data-value="replace">원화만</button>
+      </div>
+    </section>
+
+    <section>
+      <button id="pick" class="wide">칸 직접 지정</button>
+      <p class="meta" id="pins"></p>
+    </section>
+
+    <p class="meta foot">업비트 USDT/KRW 기준 · 단축키 Alt+Shift+K</p>
+    <script src="../src/format.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
