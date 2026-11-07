@@ -19,12 +19,18 @@ Unrealized PNL     -12.30 USDT ≈ -1.7만원
 
 ## 설치
 
-1. 이 저장소를 내려받습니다. (`Code` → `Download ZIP` 후 압축 해제, 또는 `git clone`)
+1. **[wonlens.zip 내려받기](https://github.com/namhyuniverse/wonlens/releases/latest/download/wonlens.zip)** → 압축을 풀면 `wonlens` 폴더가 나옵니다.
+   이 폴더는 지우지 말고 둘 곳(예: `문서`)으로 옮겨 두세요. 크롬이 이 폴더에서 확장을 읽습니다.
 2. 크롬 주소창에 `chrome://extensions` 입력 → 오른쪽 위 **개발자 모드** 켜기
-3. **압축해제된 확장 프로그램을 로드합니다** → 내려받은 폴더 선택
+3. **압축해제된 확장 프로그램을 로드합니다** → `wonlens` 폴더 선택
 4. 바이낸스 탭을 새로고침
 
-크롬 116 이상이 필요합니다.
+크롬 116 이상이 필요합니다. 툴바에 아이콘이 안 보이면 퍼즐 모양 아이콘에서 wonlens 를 고정하세요.
+
+### 업데이트
+
+새 버전의 zip 을 받아 기존 `wonlens` 폴더 내용을 덮어쓴 뒤, `chrome://extensions` 에서 wonlens 의 새로고침(↻) 버튼을 누르세요.
+같은 폴더를 쓰면 설정과 지정한 칸이 그대로 유지됩니다. 버전 목록은 [Releases](https://github.com/namhyuniverse/wonlens/releases) 에 있습니다.
 
 ## 사용법
 
@@ -72,7 +78,10 @@ Unrealized PNL     -12.30 USDT ≈ -1.7만원
 ```
 npm install
 npm test
+npm run pack   # dist/wonlens.zip
 ```
+
+`manifest.json` 의 버전을 올리고 같은 버전의 태그(`v0.3.0` 등)를 push 하면, GitHub Actions 가 테스트 후 zip 을 붙인 Release 를 만듭니다.
 
 | 경로 | 역할 |
 | --- | --- |
